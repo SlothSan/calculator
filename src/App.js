@@ -1,6 +1,5 @@
 import './App.css';
 import CalculatorContainer from "./Components/CalculatorContainer/CalculatorContainer";
-import CalculatorDisplay from "./Components/CalculatorContainer/CalculatorDisplay/CalculatorDisplay";
 
 function App() {
   return (
