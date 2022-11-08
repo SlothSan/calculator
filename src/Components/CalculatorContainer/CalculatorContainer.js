@@ -18,7 +18,13 @@ const CalculatorContainer = () => {
                 <DigitButton buttonNumberString={"seven"} buttonNumber={7}/>
                 <DigitButton buttonNumberString={"eight"} buttonNumber={8}/>
                 <DigitButton buttonNumberString={"nine"} buttonNumber={9}/>
-                <OperatorButton operatorType={"minus"} operatorSymbol={"-"} />
+                <OperatorButton operatorType={"subtract"} operatorSymbol={"-"} />
+            </CalculatorRow>
+            <CalculatorRow>
+                <DigitButton buttonNumberString={"4"} buttonNumber={4}/>
+                <DigitButton buttonNumberString={"5"} buttonNumber={5}/>
+                <DigitButton buttonNumberString={"6"} buttonNumber={6}/>
+                <OperatorButton operatorType={"add"} operatorSymbol={"+"}/>
             </CalculatorRow>
         </div>
     )
