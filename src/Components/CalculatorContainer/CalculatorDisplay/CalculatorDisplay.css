@@ -1,0 +1,17 @@
+.calculator-display {
+  margin: 20px auto;
+  width: 450px;
+  height: 75px;
+  background-color: cyan;
+  text-align: right;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.calculator-display p {
+  padding: 5px;
+}
+
+/*# sourceMappingURL=CalculatorDisplay.css.map */
