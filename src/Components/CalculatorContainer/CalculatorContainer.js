@@ -1,8 +1,11 @@
 import './CalculatorContainer.css'
+import CalculatorDisplay from "../CalculatorDisplay/CalculatorDisplay";
 
 const CalculatorContainer = () => {
     return (
-        <div className={"calculator-container"}></div>
+        <div className={"calculator-container"}>
+            <CalculatorDisplay />
+        </div>
     )
 }
 
