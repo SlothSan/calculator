@@ -12,7 +12,7 @@ const DecimalButton = (props) => {
                 props.setDecimalIsUsed(true)
                 } else {
                     props.setDisplayValue(props.displayValue + '.')
-                    props.setRunningValue(props.displayValue + '.')
+                    props.setRunningValue(props.runningValue + '.')
                     props.setDecimalIsUsed(true)
                 }
             }

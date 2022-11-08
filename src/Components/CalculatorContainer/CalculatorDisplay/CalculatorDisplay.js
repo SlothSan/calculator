@@ -2,9 +2,9 @@ import './CalculatorDisplay.css'
 
 const CalculatorDisplay = (props) => {
     return (
-        <div id={"display"} className={"calculator-display"}>
+        <div className={"calculator-display"}>
             <p>{props.runningValue}</p>
-            <p>{props.displayValue ? props.displayValue : ''}</p>
+            <p id={"display"}>{props.displayValue}</p>
         </div>
     )
 }

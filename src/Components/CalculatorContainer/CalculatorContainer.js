@@ -20,8 +20,14 @@ const CalculatorContainer = () => {
             <CalculatorRow>
                 <ClearButton setDisplayValue={setDisplayValue} setRunningValue={setRunningValue}
                              setDecimalIsUsed={setDecimalIsUsed}/>
-                <OperatorButton operatorType={"divide"} operatorSymbol={"/"}/>
-                <OperatorButton operatorType={"multiply"} operatorSymbol={"*"}/>
+                <OperatorButton operatorType={"divide"} operatorSymbol={"/"}
+                                displayValue={displayValue} runningValue={runningValue}
+                                setDisplayValue={setDisplayValue} setRunningValue={setRunningValue}
+                                setDecimalIsUsed={setDecimalIsUsed}/>
+                <OperatorButton operatorType={"multiply"} operatorSymbol={"*"}
+                                displayValue={displayValue} runningValue={runningValue}
+                                setDisplayValue={setDisplayValue} setRunningValue={setRunningValue}
+                                setDecimalIsUsed={setDecimalIsUsed}/>
             </CalculatorRow>
             <CalculatorRow>
                 <DigitButton buttonNumberString={"seven"} buttonNumber={7}
@@ -33,7 +39,10 @@ const CalculatorContainer = () => {
                 <DigitButton buttonNumberString={"nine"} buttonNumber={9}
                              displayValue={displayValue} runningValue={runningValue}
                              setDisplayValue={setDisplayValue} setRunningValue={setRunningValue}/>
-                <OperatorButton operatorType={"subtract"} operatorSymbol={"-"} />
+                <OperatorButton operatorType={"subtract"} operatorSymbol={"-"}
+                                displayValue={displayValue} runningValue={runningValue}
+                                setDisplayValue={setDisplayValue} setRunningValue={setRunningValue}
+                                setDecimalIsUsed={setDecimalIsUsed}/>
             </CalculatorRow>
             <CalculatorRow>
                 <DigitButton buttonNumberString={"four"} buttonNumber={4}
@@ -45,7 +54,10 @@ const CalculatorContainer = () => {
                 <DigitButton buttonNumberString={"six"} buttonNumber={6}
                              displayValue={displayValue} runningValue={runningValue}
                              setDisplayValue={setDisplayValue} setRunningValue={setRunningValue}/>
-                <OperatorButton operatorType={"add"} operatorSymbol={"+"}/>
+                <OperatorButton operatorType={"add"} operatorSymbol={"+"}
+                                displayValue={displayValue} runningValue={runningValue}
+                                setDisplayValue={setDisplayValue} setRunningValue={setRunningValue}
+                                setDecimalIsUsed={setDecimalIsUsed}/>
             </CalculatorRow>
             <CalculatorRow>
                 <DigitButton buttonNumberString={"one"} buttonNumber={1}
@@ -57,7 +69,8 @@ const CalculatorContainer = () => {
                 <DigitButton buttonNumberString={"three"} buttonNumber={3}
                              displayValue={displayValue} runningValue={runningValue}
                              setDisplayValue={setDisplayValue} setRunningValue={setRunningValue}/>
-                <EqualsButton />
+                <EqualsButton runningValue={runningValue} setRunningValue={setRunningValue}
+                              setDisplayValue={setDisplayValue}/>
             </CalculatorRow>
             <CalculatorRow>
                 <DigitButton className={"zero-button"} buttonNumberString={"zero"} buttonNumber={0}
