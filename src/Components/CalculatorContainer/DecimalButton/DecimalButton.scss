@@ -1,5 +1,5 @@
-.digit-button {
-  width: 25%;
+.decimal-button {
+  width: 29%;
   height: 100%;
   display: inline-block;
   border: none;
@@ -16,11 +16,8 @@
   margin: 0 5px;
 }
 
-.digit-button:hover,
-.digit-button:focus {
+.decimal-button:hover,
+.decimal-button:focus {
   color: black;
   outline: 1px solid #fff;
-}
-#zero {
-  width: 61%;
 }

@@ -7,3 +7,9 @@
   margin-top: 10px;
   overflow: visible;
 }
+
+.calculator-row:last-of-type {
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
+}

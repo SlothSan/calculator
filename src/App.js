@@ -5,6 +5,8 @@ function App() {
   return (
     <div className="App">
       <CalculatorContainer/>
+        <p>Designed & Created By</p>
+        <p>Mike Oram</p>
     </div>
   );
 }
