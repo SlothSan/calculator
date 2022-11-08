@@ -1,8 +1,14 @@
 import './ClearButton.css'
 
-const ClearButton = () => {
+const ClearButton = (props) => {
+
+    const handleClearClick = () => {
+        props.setDisplayValue('')
+        props.setRunningValue('')
+    }
+
     return (
-        <button id={"clear"} className={"clear-button"}>
+        <button id={"clear"} className={"clear-button"} onClick={handleClearClick}>
             AC
         </button>
     )
