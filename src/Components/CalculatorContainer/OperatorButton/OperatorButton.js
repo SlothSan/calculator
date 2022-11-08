@@ -3,9 +3,10 @@ import './OperatorButton.css'
 const OperatorButton = (props) => {
 
     const handleOperatorClick = () => {
-        props.setDecimalIsUsed(false)
-        props.setDisplayValue(props.displayValue + props.operatorSymbol)
-        props.setRunningValue(props.runningValue + props.operatorSymbol)
+            props.setDecimalIsUsed(false)
+            props.setDisplayValue(props.displayValue + props.operatorSymbol)
+            props.setRunningValue(props.runningValue + props.operatorSymbol)
+            props.setLastOperator(props.operatorSymbol)
     }
 
     return (

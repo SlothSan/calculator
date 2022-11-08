@@ -12,6 +12,7 @@ const CalculatorContainer = () => {
 
     const [displayValue, setDisplayValue] = useState("")
     const [runningValue, setRunningValue] = useState("")
+    const [lastOperator, setLastOperator] = useState("")
     const [decimalIsUsed, setDecimalIsUsed] = useState(false)
 
     return (
@@ -23,11 +24,13 @@ const CalculatorContainer = () => {
                 <OperatorButton operatorType={"divide"} operatorSymbol={"/"}
                                 displayValue={displayValue} runningValue={runningValue}
                                 setDisplayValue={setDisplayValue} setRunningValue={setRunningValue}
-                                setDecimalIsUsed={setDecimalIsUsed}/>
+                                setDecimalIsUsed={setDecimalIsUsed}
+                                lastOperator={lastOperator} setLastOperator={setLastOperator}/>
                 <OperatorButton operatorType={"multiply"} operatorSymbol={"*"}
                                 displayValue={displayValue} runningValue={runningValue}
                                 setDisplayValue={setDisplayValue} setRunningValue={setRunningValue}
-                                setDecimalIsUsed={setDecimalIsUsed}/>
+                                setDecimalIsUsed={setDecimalIsUsed}
+                                lastOperator={lastOperator} setLastOperator={setLastOperator}/>
             </CalculatorRow>
             <CalculatorRow>
                 <DigitButton buttonNumberString={"seven"} buttonNumber={7}
@@ -42,7 +45,8 @@ const CalculatorContainer = () => {
                 <OperatorButton operatorType={"subtract"} operatorSymbol={"-"}
                                 displayValue={displayValue} runningValue={runningValue}
                                 setDisplayValue={setDisplayValue} setRunningValue={setRunningValue}
-                                setDecimalIsUsed={setDecimalIsUsed}/>
+                                setDecimalIsUsed={setDecimalIsUsed}
+                                lastOperator={lastOperator} setLastOperator={setLastOperator}/>
             </CalculatorRow>
             <CalculatorRow>
                 <DigitButton buttonNumberString={"four"} buttonNumber={4}
@@ -57,7 +61,8 @@ const CalculatorContainer = () => {
                 <OperatorButton operatorType={"add"} operatorSymbol={"+"}
                                 displayValue={displayValue} runningValue={runningValue}
                                 setDisplayValue={setDisplayValue} setRunningValue={setRunningValue}
-                                setDecimalIsUsed={setDecimalIsUsed}/>
+                                setDecimalIsUsed={setDecimalIsUsed}
+                                lastOperator={lastOperator} setLastOperator={setLastOperator}/>
             </CalculatorRow>
             <CalculatorRow>
                 <DigitButton buttonNumberString={"one"} buttonNumber={1}
