@@ -3,9 +3,12 @@ import './EqualsButton.css'
 const EqualsButton = (props) => {
 
     const handleEqualsClick = () => {
-        const result = parseFloat(eval(props.runningValue)).toFixed(4)
-        props.setRunningValue(props.runningValue + "=" + result)
-        props.setDisplayValue(result)
+        if(props.runningValue.includes("=")) {
+        } else {
+            const result = parseFloat(eval(props.runningValue))
+            props.setRunningValue(props.runningValue + "=" + result)
+            props.setDisplayValue(result)
+        }
     }
 
     return (
