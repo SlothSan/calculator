@@ -70,7 +70,7 @@ const CalculatorContainer = () => {
                              displayValue={displayValue} runningValue={runningValue}
                              setDisplayValue={setDisplayValue} setRunningValue={setRunningValue}/>
                 <EqualsButton runningValue={runningValue} setRunningValue={setRunningValue}
-                              setDisplayValue={setDisplayValue}/>
+                              setDisplayValue={setDisplayValue} displayValue={displayValue}/>
             </CalculatorRow>
             <CalculatorRow>
                 <DigitButton className={"zero-button"} buttonNumberString={"zero"} buttonNumber={0}
