@@ -1,4 +1,12 @@
-# Getting Started with Create React App
+# Calculator 
+
+Created using React for the FreeCodeCamp Front End course.
+
+Uses the gh-pages npm package for deployment : https://www.npmjs.com/package/gh-pages
+
+Uses the Math.js package for evaluating expressions : https://mathjs.org/
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
