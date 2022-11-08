@@ -5,4 +5,11 @@
   background-color: cyan;
   text-align: right;
   border-radius: 5px;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  p {
+    padding: 5px;
+  }
 }
