@@ -4,6 +4,7 @@ import CalculatorRow from "./CalculatorRow/CalculatorRow";
 import ClearButton from "./ClearButton/ClearButton";
 import OperatorButton from "./OperatorButton/OperatorButton";
 import DigitButton from "./DigitButton/DigitButton";
+import EqualsButton from "./EqualsButton/EqualsButton";
 
 const CalculatorContainer = () => {
     return (
@@ -25,6 +26,12 @@ const CalculatorContainer = () => {
                 <DigitButton buttonNumberString={"5"} buttonNumber={5}/>
                 <DigitButton buttonNumberString={"6"} buttonNumber={6}/>
                 <OperatorButton operatorType={"add"} operatorSymbol={"+"}/>
+            </CalculatorRow>
+            <CalculatorRow>
+                <DigitButton buttonNumberString={"1"} buttonNumber={1}/>
+                <DigitButton buttonNumberString={"2"} buttonNumber={2}/>
+                <DigitButton buttonNumberString={"3"} buttonNumber={3}/>
+                <EqualsButton />
             </CalculatorRow>
         </div>
     )
