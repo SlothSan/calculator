@@ -6,11 +6,16 @@ import OperatorButton from "./OperatorButton/OperatorButton";
 import DigitButton from "./DigitButton/DigitButton";
 import EqualsButton from "./EqualsButton/EqualsButton";
 import DecimalButton from "./DecimalButton/DecimalButton";
+import {useState} from "react";
 
 const CalculatorContainer = () => {
+
+    const [displayValue, setDisplayValue] = useState()
+    const [runningValue, setRunningValue] = useState()
+
     return (
         <div className={"calculator-container"}>
-            <CalculatorDisplay />
+            <CalculatorDisplay displayValue={displayValue} runningValue={runningValue} />
             <CalculatorRow>
                 <ClearButton />
                 <OperatorButton operatorType={"divide"} operatorSymbol={"/"}/>

@@ -1,10 +1,10 @@
 import './CalculatorDisplay.css'
 
-const CalculatorDisplay = () => {
+const CalculatorDisplay = (props) => {
     return (
         <div id={"display"} className={"calculator-display"}>
-            <p>0</p>
-            <p>0</p>
+            <p>{props.runningValue}</p>
+            <p>{props.displayValue ? props.displayValue : ''}</p>
         </div>
     )
 }
