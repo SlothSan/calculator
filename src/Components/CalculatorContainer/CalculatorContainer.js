@@ -12,12 +12,14 @@ const CalculatorContainer = () => {
 
     const [displayValue, setDisplayValue] = useState("")
     const [runningValue, setRunningValue] = useState("")
+    const [decimalIsUsed, setDecimalIsUsed] = useState(false)
 
     return (
         <div className={"calculator-container"}>
             <CalculatorDisplay displayValue={displayValue} runningValue={runningValue}/>
             <CalculatorRow>
-                <ClearButton setDisplayValue={setDisplayValue} setRunningValue={setRunningValue}/>
+                <ClearButton setDisplayValue={setDisplayValue} setRunningValue={setRunningValue}
+                             setDecimalIsUsed={setDecimalIsUsed}/>
                 <OperatorButton operatorType={"divide"} operatorSymbol={"/"}/>
                 <OperatorButton operatorType={"multiply"} operatorSymbol={"*"}/>
             </CalculatorRow>
@@ -61,7 +63,9 @@ const CalculatorContainer = () => {
                 <DigitButton className={"zero-button"} buttonNumberString={"zero"} buttonNumber={0}
                              displayValue={displayValue} runningValue={runningValue}
                              setDisplayValue={setDisplayValue} setRunningValue={setRunningValue}/>
-                <DecimalButton />
+                <DecimalButton displayValue={displayValue} runningValue={runningValue}
+                               setDisplayValue={setDisplayValue} setRunningValue={setRunningValue}
+                               decimalIsUsed={decimalIsUsed} setDecimalIsUsed={setDecimalIsUsed}/>
             </CalculatorRow>
         </div>
     )

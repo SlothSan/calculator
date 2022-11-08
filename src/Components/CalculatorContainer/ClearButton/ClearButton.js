@@ -5,6 +5,7 @@ const ClearButton = (props) => {
     const handleClearClick = () => {
         props.setDisplayValue('')
         props.setRunningValue('')
+        props.setDecimalIsUsed(false)
     }
 
     return (
