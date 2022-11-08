@@ -8,8 +8,6 @@ Uses the Math.js package for evaluating expressions : https://mathjs.org/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Available Scripts
 
 In the project directory, you can run:
