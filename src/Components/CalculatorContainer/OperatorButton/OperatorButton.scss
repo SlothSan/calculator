@@ -1,0 +1,23 @@
+.operator-button {
+  width: 23%;
+  height: 100%;
+  display: inline-block;
+  border: none;
+  background: rgb(102, 102, 102);
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  transition: background 250ms ease-in-out,
+  transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 5px;
+  margin: 0 2px;
+}
+
+.operator-button:hover,
+.operator-button:focus {
+  color: black;
+  outline: 1px solid #fff;
+}

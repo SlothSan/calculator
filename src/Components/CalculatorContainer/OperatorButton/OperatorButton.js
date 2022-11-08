@@ -1,8 +1,10 @@
 import './OperatorButton.css'
 
-const OperatorButton = () => {
+const OperatorButton = (props) => {
     return (
-        <button></button>
+        <button id={props.operatorType} className={"operator-button"}>
+            {props.operatorSymbol}
+        </button>
     )
 }
 

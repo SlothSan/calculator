@@ -1,5 +1,5 @@
 .clear-button {
-  width: 50%;
+  width: 48%;
   height: 100%;
   display: inline-block;
   border: none;
@@ -13,6 +13,7 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   border-radius: 5px;
+  margin: 0 2px;
 }
 
 .clear-button:hover,
