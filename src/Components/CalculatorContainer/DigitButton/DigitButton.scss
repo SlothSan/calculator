@@ -1,9 +1,9 @@
-.clear-button {
-  width: 53%;
+.digit-button {
+  width: 25%;
   height: 100%;
   display: inline-block;
   border: none;
-  background-color: darkred;
+  background: #4d4d4d;
   font-size: 1.5rem;
   color: white;
   cursor: pointer;
@@ -16,8 +16,8 @@
   margin: 0 5px;
 }
 
-.clear-button:hover,
-.clear-button:focus {
+.digit-button:hover,
+.digit-button:focus {
   color: black;
   outline: 1px solid #fff;
 }
