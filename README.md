@@ -1,3 +1,7 @@
+# WILL COME BACK AND REFACTOR THE FUNCTIONALITY AT SOMEPOINT AS IT IS A LITTLE BUGGY!
+
+
+
 # Calculator 
 
 Created using React for the FreeCodeCamp Front End course.
