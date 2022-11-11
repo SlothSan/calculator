@@ -4,6 +4,7 @@ const OperatorButton = (props) => {
 
     const handleOperatorClick = (event) => {
         event.preventDefault()
+        //TODO setup the logic for adding operators.
     }
 
     return (
