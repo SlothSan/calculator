@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import CalculatorDisplay from "../CalculatorDisplay/CalculatorDisplay";
 import OperandButton from "../OperandButton/OperandButton";
 import OperatorButton from "../OperatorButton/OperatorButton";
@@ -7,29 +7,36 @@ import EqualsButton from "../EqualsButton/EqualsButton";
 import DecimalButton from "../DecimalButton/DecimalButton";
 
 const CalculatorContainer = () => {
-
+    const [inputValue, setInputValue] = useState('0')
     const [displayValue, setDisplayValue] = useState('0')
-    const [inputValue, setInputValue] = useState('')
     const [outputValue, setOutputValue] = useState('')
+
+    useEffect(() => {
+        if(displayValue === '0') {
+            setDisplayValue(inputValue)
+        } else {
+            setDisplayValue(displayValue + inputValue)
+        }
+    }, [inputValue])
 
     return (
         <div className={"calculator-container"}>
             <CalculatorDisplay displayValue={displayValue}/>
-            <OperandButton id={"zero"} operandValue={"0"}/>
-            <OperandButton id={"one"} operandValue={"1"}/>
-            <OperandButton id={"two"} operandValue={"2"}/>
-            <OperandButton id={"three"} operandValue={"3"}/>
-            <OperandButton id={"four"} operandValue={"4"}/>
-            <OperandButton id={"five"} operandValue={"5"}/>
-            <OperandButton id={"six"} operandValue={"6"}/>
-            <OperandButton id={"seven"} operandValue={"7"}/>
-            <OperandButton id={"eight"} operandValue={"8"}/>
-            <OperandButton id={"nine"} operandValue={"9"}/>
+            <OperandButton id={"zero"} operandValue={"0"} setInputValue={setInputValue}/>
+            <OperandButton id={"one"} operandValue={"1"} setInputValue={setInputValue}/>
+            <OperandButton id={"two"} operandValue={"2"} setInputValue={setInputValue}/>
+            <OperandButton id={"three"} operandValue={"3"} setInputValue={setInputValue}/>
+            <OperandButton id={"four"} operandValue={"4"} setInputValue={setInputValue}/>
+            <OperandButton id={"five"} operandValue={"5"} setInputValue={setInputValue}/>
+            <OperandButton id={"six"} operandValue={"6"} setInputValue={setInputValue}/>
+            <OperandButton id={"seven"} operandValue={"7"} setInputValue={setInputValue}/>
+            <OperandButton id={"eight"} operandValue={"8"} setInputValue={setInputValue}/>
+            <OperandButton id={"nine"} operandValue={"9"} setInputValue={setInputValue}/>
             <OperatorButton id={"add"} operatorValue={"+"}/>
             <OperatorButton id={"subtract"} operatorValue={"-"}/>
             <OperatorButton id={"multiply"} operatorValue={"*"}/>
             <OperatorButton id={"divide"} operatorValue={"/"}/>
-            <ClearButton id={"clear"} clearValue={"AC"}/>
+            <ClearButton id={"clear"} clearValue={"AC"} setInputValue={setInputValue} setOutputValue={setOutputValue} setDisplayValue={setDisplayValue}/>
             <EqualsButton id={"equals"} equalsValue={"="}/>
             <DecimalButton id={"decimal"} decimalValue={"."}/>
         </div>
