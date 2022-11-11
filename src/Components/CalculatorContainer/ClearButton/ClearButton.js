@@ -3,7 +3,8 @@ import './ClearButton.css'
 const ClearButton = (props) => {
 
     const handleClearClick = () => {
-
+        props.setDisplayValue('0')
+        props.setDecimalIsUsed(false)
     }
 
     return (

@@ -2,8 +2,12 @@ import './DigitButton.css'
 
 const DigitButton = (props) => {
 
-    const handleDigitClick = (event) => {
-
+    const handleDigitClick = () => {
+        if(props.displayValue === '0') {
+            props.setDisplayValue(String(props.buttonNumber))
+        } else {
+            props.setDisplayValue(String(props.displayValue + props.buttonNumber))
+        }
     }
 
     return (
