@@ -2,13 +2,15 @@ import './OperatorButton.css'
 
 const OperatorButton = (props) => {
 
-    //5 * - + 5
-
     const handleOperatorClick = () => {
-        props.setDecimalIsUsed(false)
-        props.setDisplayValue(props.displayValue + props.operatorSymbol)
-        props.setRunningValue(props.runningValue + props.operatorSymbol)
-        props.setLastOperator(props.operatorSymbol)
+        if (props.lastOperator === props.operatorSymbol && props.operatorSymbol !== '-') {
+            console.log('Cant use the same operator');
+        } else {
+            props.setDecimalIsUsed(false)
+            props.setDisplayValue(props.displayValue + props.operatorSymbol)
+            props.setRunningValue(props.runningValue + props.operatorSymbol)
+            props.setLastOperator(props.operatorSymbol)
+        }
     }
 
     return (

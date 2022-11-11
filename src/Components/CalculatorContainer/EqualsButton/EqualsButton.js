@@ -8,6 +8,8 @@ const EqualsButton = (props) => {
         const compiledData = parsedData.compile()
         const result = compiledData.evaluate()
         props.setRunningValue(props.runningValue + "=" + result)
+        props.setLastOperator('')
+        props.setDecimalIsUsed(false)
         props.setDisplayValue(result)
     }
 

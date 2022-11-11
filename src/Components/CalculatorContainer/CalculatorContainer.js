@@ -20,7 +20,7 @@ const CalculatorContainer = () => {
             <CalculatorDisplay displayValue={displayValue} runningValue={runningValue}/>
             <CalculatorRow>
                 <ClearButton setDisplayValue={setDisplayValue} setRunningValue={setRunningValue}
-                             setDecimalIsUsed={setDecimalIsUsed}/>
+                             setDecimalIsUsed={setDecimalIsUsed} setLastOperator={setLastOperator}/>
                 <OperatorButton operatorType={"divide"} operatorSymbol={"/"}
                                 displayValue={displayValue} runningValue={runningValue}
                                 setDisplayValue={setDisplayValue} setRunningValue={setRunningValue}
@@ -75,7 +75,8 @@ const CalculatorContainer = () => {
                              displayValue={displayValue} runningValue={runningValue}
                              setDisplayValue={setDisplayValue} setRunningValue={setRunningValue}/>
                 <EqualsButton runningValue={runningValue} setRunningValue={setRunningValue}
-                              setDisplayValue={setDisplayValue} displayValue={displayValue}/>
+                              setDisplayValue={setDisplayValue} displayValue={displayValue}
+                              setLastOperator={setLastOperator} setDecimalIsUsed={setDecimalIsUsed}/>
             </CalculatorRow>
             <CalculatorRow>
                 <DigitButton className={"zero-button"} buttonNumberString={"zero"} buttonNumber={0}
@@ -89,4 +90,4 @@ const CalculatorContainer = () => {
     )
 }
 
-export default  CalculatorContainer
+export default CalculatorContainer
