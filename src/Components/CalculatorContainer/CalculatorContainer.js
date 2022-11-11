@@ -19,6 +19,10 @@ const CalculatorContainer = () => {
         }
     }, [inputValue])
 
+    useEffect(() => {
+        setDisplayValue(outputValue)
+    }, [outputValue])
+
     return (
         <div className={"calculator-container"}>
             <CalculatorDisplay displayValue={displayValue}/>
@@ -32,10 +36,10 @@ const CalculatorContainer = () => {
             <OperandButton id={"seven"} operandValue={"7"} setInputValue={setInputValue}/>
             <OperandButton id={"eight"} operandValue={"8"} setInputValue={setInputValue}/>
             <OperandButton id={"nine"} operandValue={"9"} setInputValue={setInputValue}/>
-            <OperatorButton id={"add"} operatorValue={"+"}/>
-            <OperatorButton id={"subtract"} operatorValue={"-"}/>
-            <OperatorButton id={"multiply"} operatorValue={"*"}/>
-            <OperatorButton id={"divide"} operatorValue={"/"}/>
+            <OperatorButton id={"add"} operatorValue={"+"} setInputValue={setInputValue}/>
+            <OperatorButton id={"subtract"} operatorValue={"-"} setInputValue={setInputValue}/>
+            <OperatorButton id={"multiply"} operatorValue={"*"} setInputValue={setInputValue}/>
+            <OperatorButton id={"divide"} operatorValue={"/"} setInputValue={setInputValue}/>
             <ClearButton id={"clear"} clearValue={"AC"} setInputValue={setInputValue} setOutputValue={setOutputValue} setDisplayValue={setDisplayValue}/>
             <EqualsButton id={"equals"} equalsValue={"="}/>
             <DecimalButton id={"decimal"} decimalValue={"."}/>
