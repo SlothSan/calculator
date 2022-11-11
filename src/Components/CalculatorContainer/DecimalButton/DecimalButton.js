@@ -16,7 +16,7 @@ const DecimalButton = (props) => {
                     props.setDecimalIsUsed(true)
                 }
             }
-        }
+    }
 
     return (
         <button id={"decimal"} className={"decimal-button"} onClick={handleDecimalClick}>
