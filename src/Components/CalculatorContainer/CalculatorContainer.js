@@ -10,24 +10,26 @@ import {useState} from "react";
 
 const CalculatorContainer = () => {
 
+    const [result, setResult] = useState('')
     const [displayValue, setDisplayValue] = useState("0")
     const [lastOperator, setLastOperator] = useState("")
     const [decimalIsUsed, setDecimalIsUsed] = useState(false)
 
     return (
         <div className={"calculator-container"}>
-            <CalculatorDisplay displayValue={displayValue}/>
+            <CalculatorDisplay displayValue={displayValue}
+                               result={result}/>
             <CalculatorRow>
                 <ClearButton setDisplayValue={setDisplayValue}
                              setDecimalIsUsed={setDecimalIsUsed}/>
                 <OperatorButton operatorType={"divide"}
-                                operatorSymbol={"/"}
+                                operatorSymbol={" / "}
                                 displayValue={displayValue}
                                 setDisplayValue={setDisplayValue}
                                 setDecimalIsUsed={setDecimalIsUsed}
                                 lastOperator={lastOperator}
                                 setLastOperator={setLastOperator}/>
-                <OperatorButton operatorType={"multiply"} operatorSymbol={"*"}
+                <OperatorButton operatorType={"multiply"} operatorSymbol={" * "}
                                 displayValue={displayValue}
                                 setDisplayValue={setDisplayValue}
                                 setDecimalIsUsed={setDecimalIsUsed}
@@ -48,7 +50,7 @@ const CalculatorContainer = () => {
                              displayValue={displayValue}
                              setDisplayValue={setDisplayValue}/>
                 <OperatorButton operatorType={"subtract"}
-                                operatorSymbol={"-"}
+                                operatorSymbol={" - "}
                                 displayValue={displayValue}
                                 setDisplayValue={setDisplayValue}
                                 setDecimalIsUsed={setDecimalIsUsed}
@@ -61,14 +63,15 @@ const CalculatorContainer = () => {
                              displayValue={displayValue}
                              setDisplayValue={setDisplayValue}/>
                 <DigitButton buttonNumberString={"five"}
-                             buttonNumber={5}
+                             buttonNumber={"5"}
                              displayValue={displayValue}
                              setDisplayValue={setDisplayValue}/>
-                <DigitButton buttonNumberString={"six"} buttonNumber={6}
+                <DigitButton buttonNumberString={"six"}
+                             buttonNumber={6}
                              displayValue={displayValue}
                              setDisplayValue={setDisplayValue} />
                 <OperatorButton operatorType={"add"}
-                                operatorSymbol={"+"}
+                                operatorSymbol={" + "}
                                 displayValue={displayValue}
                                 setDisplayValue={setDisplayValue}
                                 setDecimalIsUsed={setDecimalIsUsed}
@@ -89,7 +92,8 @@ const CalculatorContainer = () => {
                              displayValue={displayValue}
                              setDisplayValue={setDisplayValue}/>
                 <EqualsButton setDisplayValue={setDisplayValue}
-                              displayValue={displayValue}/>
+                              displayValue={displayValue}
+                              setResult={setResult}/>
             </CalculatorRow>
             <CalculatorRow>
                 <DigitButton className={"zero-button"}
