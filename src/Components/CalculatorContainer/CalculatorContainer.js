@@ -4,6 +4,7 @@ import OperandButton from "../OperandButton/OperandButton";
 import OperatorButton from "../OperatorButton/OperatorButton";
 import ClearButton from "../ClearButton/ClearButton";
 import EqualsButton from "../EqualsButton/EqualsButton";
+import DecimalButton from "../DecimalButton/DecimalButton";
 
 const CalculatorContainer = () => {
 
@@ -30,6 +31,7 @@ const CalculatorContainer = () => {
             <OperatorButton id={"divide"} operatorValue={"/"}/>
             <ClearButton id={"clear"} clearValue={"AC"}/>
             <EqualsButton id={"equals"} equalsValue={"="}/>
+            <DecimalButton id={"decimal"} decimalValue={"."}/>
         </div>
     )
 }
