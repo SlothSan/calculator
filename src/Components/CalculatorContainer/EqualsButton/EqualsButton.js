@@ -4,7 +4,9 @@ import {parse} from "mathjs";
 const EqualsButton = (props) => {
 
     const handleEqualsClick = () => {
-        const parsedData = parse(props.displayValue)
+        let string = props.displayValue;
+        let filtered = string.match(/(\*|\+|\/|-)?(\.|\-)?\d+/g).join('')
+        const parsedData = parse(filtered)
         const compiledData = parsedData.compile()
         const result = compiledData.evaluate()
         props.setRunningValue(props.runningValue + "=" + result)
