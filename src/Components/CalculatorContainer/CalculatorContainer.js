@@ -10,8 +10,8 @@ import {useState} from "react";
 
 const CalculatorContainer = () => {
 
-    const [displayValue, setDisplayValue] = useState("")
-    const [runningValue, setRunningValue] = useState("")
+    const [displayValue, setDisplayValue] = useState("0")
+    const [runningValue, setRunningValue] = useState("0")
     const [lastOperator, setLastOperator] = useState("")
     const [decimalIsUsed, setDecimalIsUsed] = useState(false)
 

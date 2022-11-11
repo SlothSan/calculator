@@ -2,7 +2,8 @@ import './OperatorButton.css'
 
 const OperatorButton = (props) => {
 
-    const handleOperatorClick = () => {
+    const handleOperatorClick = (event) => {
+        event.preventDefault()
     }
 
     return (
