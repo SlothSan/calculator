@@ -2,6 +2,7 @@ import {useState} from "react";
 import CalculatorDisplay from "../CalculatorDisplay/CalculatorDisplay";
 import OperandButton from "../OperandButton/OperandButton";
 import OperatorButton from "../OperatorButton/OperatorButton";
+import ClearButton from "../ClearButton/ClearButton";
 
 const CalculatorContainer = () => {
 
@@ -26,6 +27,7 @@ const CalculatorContainer = () => {
             <OperatorButton id={"subtract"} operatorValue={"-"}/>
             <OperatorButton id={"multiply"} operatorValue={"*"}/>
             <OperatorButton id={"divide"} operatorValue={"/"}/>
+            <ClearButton id={"clear"} clearValue={"AC"} />
         </div>
     )
 }
